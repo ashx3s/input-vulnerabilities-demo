@@ -1,0 +1,16 @@
+{
+  "name": "safeguard-against-malicious-inputs",
+  "version": "1.0.0",
+  "description": "- Why is input validation critical for web security? - What makes sql injection a common vulnerability? why is it dangerous? - What are common pitfalls developers face when implementing validation?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
