@@ -8,6 +8,7 @@
 
 ## Input Validation Quick Notes
 
+- [OWASP Input Validation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html)
 - Syntactic (enforce ccorrect syntax)
 - Semantic (enforce correct values for their context)
 - Client side (validation done at the point where users input content -- can be circumvented with web proxys): this improves UX more
