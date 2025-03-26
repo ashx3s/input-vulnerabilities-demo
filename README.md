@@ -1,5 +1,8 @@
 # README
 
+- TODO: set up server (to get away from live server)
+- TODO: add server side validation (using zod)
+
 ## Questions
 
 - Why is input validation critical for web security?
