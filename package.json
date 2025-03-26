@@ -4,6 +4,7 @@
   "description": "- Why is input validation critical for web security? - What makes sql injection a common vulnerability? why is it dangerous? - What are common pitfalls developers face when implementing validation?",
   "main": "index.js",
   "scripts": {
+    "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
