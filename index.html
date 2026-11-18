@@ -1,73 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Starter Form</title>
-    <link rel="stylesheet" href="./public/main.css" />
-    <script src="./public/script.js" defer></script>
-    <!--
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://trusted-cdn.com;"
-    /> -->
-  </head>
-  <body>
-    <header>
-      <h1>Contact Us Form</h1>
-      <p>Demonstration Form Without Input Validation</p>
-    </header>
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <form id="contactForm">
-        <!-- Basic Input Fields without validation -->
-        <label for="name">Name:</label>
-        <!-- Doesn't block js -->
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="John Doe"
-          pattern="[a-zA-Z ]{1,50}"
-          maxlength="50"
-          required
-        />
 
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-          id="email"
-          placeholder="john.doe@example.com"
-          required
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Starter Form</title>
+  <link rel="stylesheet" href="./public/main.css" />
+  <script src="./public/script.js" defer nonce="{RANDOM_NONCE}"></script>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'nonce-{RANDOM_NONCE}' 'strict-dynamic'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; base-uri 'self'; upgrade-insecure-requests;" />
+</head>
 
-        <label for="phone">Phone:</label>
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}"
-          placeholder="(123) 456-7890"
-          required
-        />
+<body>
+  <header>
+    <h1>Contact Us Form</h1>
+    <p>Demonstration Form Without Input Validation</p>
+  </header>
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <form id="contactForm">
+      <!-- Basic Input Fields without validation -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" pattern="[a-zA-Z ]{1,50}" maxlength="50"
+        required />
+      <span id="nameError" class="error"></span>
 
-        <label for="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Write your message here..."
-          required
-        ></textarea>
+      <label for="email">Email:</label>
+      <input type="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" id="email"
+        placeholder="john.doe@example.com" required />
+      <span id="emailError" class="error"></span>
 
-        <!-- Submit Button -->
-        <button type="button" onclick="submitForm()">Submit</button>
-      </form>
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone" id="phone" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(123) 456-7890" required />
+      <span id="phoneError" class="error"></span>
 
-      <!-- Thank You Message Section -->
-      <div id="thankYouMessage"></div>
-    </div>
-  </body>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      <span id="messageError" class="error"></span>
+
+      <!-- Submit Button -->
+      <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <!-- Thank You Message Section -->
+    <div id="thankYouMessage"></div>
+  </div>
+</body>
+
 </html>
